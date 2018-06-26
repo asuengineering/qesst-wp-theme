@@ -1,0 +1,283 @@
+/*
+Theme Name:     QESST Child Theme for MaterialWP
+Theme URI:      https://www.themeisle.com/
+Description:    This theme contains the modifications for the MaterialWP theme consistent with the QESST logotype and design considerations. For questions, please contact Steve Ryan at steve.ryan@asu.edu
+Author:         Steve Ryan
+Author URI:     https://comm.engineering.asu.edu
+Template:       materialwp
+
+Version: 0.1
+
+
+--------------------------------------------------------------
+Contains hacked together SCSS to completely replace the parent theme's CSS file. 
+Replacement happens in functions.php
+--------------------------------------------------------------
+*/
+
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+@import "vars/vars";
+
+/*--------------------------------------------------------------
+# Bootstrap
+--------------------------------------------------------------*/
+// @import "bootstrap-material-design";
+@import "bootstrap-material-design/scss/bootstrap-material-design.scss";
+
+/*--------------------------------------------------------------
+# Theme Styles and Layout
+--------------------------------------------------------------*/
+@import "site/site";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";
+
+/*--------------------------------------------------------------
+# Rules here override everything else in the stylesheet.
+--------------------------------------------------------------*/
+.admin-bar .navbar {
+    margin-top:32px;
+}
+
+@media screen and (max-width: 782px) {
+    .admin-bar .navbar {
+        margin-top: 46px;
+    }
+}
+
+.card {
+    font-size: inherit;
+    font-weight: inherit
+}
+
+.ribbon {
+    height:300px;
+    margin-top:-3em;
+    margin-bottom:-5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// Container Spacing, depending on the template
+#page {padding-top:110px;}
+
+.navbar {
+    -webkit-transition: background-color .5s, box-shadow .5s; /* Safari */
+    transition: background-color .5s, box-shadow .5s;
+
+    .navbar-brand img {
+        height:40px;
+    }
+
+    .dropdown-item {
+        font-size: .85rem;
+        min-height: 2rem;
+    }
+    
+    .site-icon  { text-decoration:none; }
+    .site-title { font-family: $font-family-headings; font-size:1.3em; vertical-align: bottom;}
+
+    .navbar-toggler {
+        color: #ffffff;
+        border-color: #ffffff;
+    }
+}
+
+.home {
+    #page {padding-top:0px;}
+    .no-shadow {box-shadow: none;}
+
+    .home-hero {
+        background: url('img/solar-panel-home-rotate-crop.jpg') no-repeat top center;
+        background-size: cover;
+        height:100vh;
+        min-height:400px;
+        text-align:left;
+        margin-bottom:0;
+
+        .typed {
+            font-size:4.2rem;
+            height:11rem;
+            margin-top:1.5em;
+        }
+    }
+
+    .teaser-boxes {
+        margin-top:3.5em;
+        color:#222222;
+        .card p {font-size:.9rem;}
+        .card img {
+            border-radius: 0 $border-radius $border-radius 0;
+        }
+    }
+
+    .about {
+        
+        background-color:#fff;
+        
+        p {font-size:1.25rem;}
+        
+        .padding-extra {
+            padding: $spacer * 5
+        }
+    }
+
+    .recent-posts {
+        background-color:#00a3e0;
+        padding-bottom:3.5em;
+
+        .recent-news-headline {
+            font-size: 8em;
+            color: rgba(255, 255, 255, .5);
+            letter-spacing: -5px;
+            margin-bottom: -2.5rem;
+        }
+
+        article {
+            margin-bottom:.5em;
+            padding-bottom:0;
+            
+        }
+        .entry-footer {
+            margin-top: 0.75em;
+            margin-right: 0px;
+            margin-bottom: 0em;
+            margin-left: 0px;
+        }
+    }
+
+    .site-footer {
+        margin-top:0;
+    }
+
+}
+
+body.single.custom-background,
+body.archive.custom-background {
+    background-color:#00a3e0;
+}
+
+.single, .archive {
+
+    .category-header {
+        font-size: 7em;
+        color: rgba(255, 255, 255, .5);
+        margin-bottom: -1.5rem;
+    }
+
+    #secondary {
+        padding-right:10px;
+        border-right:3px dotted #e0e0e0;
+        .post-thumbnail {
+            margin: 3em 1em 2em -2em;
+        }
+
+        .widget {
+            margin-top:10px;
+            border-top:3px dotted #e0e0e0;
+            padding-top:20px;
+           
+           .widget-title {
+                font-size:1.5rem;
+            }
+            
+            .textwidget {
+                padding:.5em;
+                font-size:.8rem;
+            }
+            
+            ul {margin-left:20px;}
+            
+            li {
+                font-size:.8rem;
+                list-style-type: square;
+            }
+        }
+
+    }
+
+    .entry-title {
+        margin-bottom:2em;
+    }
+}
+
+.archive {
+    .category-header {
+        font-size: 4em;
+        color: rgba(255, 255, 255, .5);
+        margin-bottom: -.9rem;
+    }
+    #secondary .widget:first-child {
+        border-top:none;
+    }
+    .entry-title {margin-bottom:.5em;}
+    .post {margin-bottom:2em;}
+    .posts-navigation a {
+        font-size: 4em;
+        color: rgba(255, 255, 255, .5);
+        font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+}
+
+#colophon {
+    background-color:#222222;
+    color:#ffffff;
+}
+
+.breadcrumbs {
+    padding-bottom: 1.5em;
+}
+
+.page-template-ribbon-page {
+    .widget-area {
+        flex:inherit;
+        max-width:inherit;
+
+        .widget-title {
+            background-color: $green;
+            color:#ffffff;
+        } 
+
+        .widget {
+            .textwidget {
+                padding:1em;
+            }
+
+            .current-menu-item:before {
+                content:'\2059 ';
+                margin-right: 5px;
+                font-size:20px;
+            }
+        }
+    }
+
+    h2.pull-left {
+        background-color: #e0e0e0;
+        padding: .5em;
+        margin: 0 0 1em -3em;
+        display:block;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        border: 1px solid #d5d5d5;
+    }
+
+}
+
+// Leadership Page
+#leaderTeam {
+    .card {
+        margin-bottom: 2em;
+    }
+    
+    .card-body {
+        padding: 1em;
+    }   
+}
