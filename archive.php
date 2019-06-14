@@ -1,91 +1,80 @@
 <?php
 /**
- * The template for displaying archive pages
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * The template for displaying archive pages.
  *
- * @package MaterialWP
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package understrap
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
-get_header(); ?>
-    <?php if ( have_posts() ) : ?>
+get_header();
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <?php 
-                the_archive_title( '<h1 class="category-header">', '</h1>' );
-                ?>
-            </div>
-        </div><!-- end .row -->
-    </div>
-    <div class="container bg-white p-3 pt-5">
-        <div class="row">
-            <div class="col-md-3">
-                <aside id="secondary" class="sidebar" role="complementary">
-                    <?php dynamic_sidebar( 'posts-sidebar' ); ?>
-                </aside><!-- #secondary -->
-            </div><!-- end .col -->
-            <div class="col-md-8 pl-5">
-                <div id="primary">
-                    <?php while ( have_posts() ) : the_post(); ?>
-                        <article id="post-<?php the_ID(); ?>" <?php post_class( ''); ?>>
-
-                            <div class="entry-title">
-                                <?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
-                            </div><!-- .entry-title -->
-
-
-                            <div class="entry-content">
-                                <?php
-                                the_excerpt(); 
-                                wp_link_pages( array(
-                                    'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'materialwp' ),
-                                    'after'  => '</div>',
-                                ) );
-                                echo '<hr>';
-                                ?>
-                            </div><!-- .entry-content -->
-
-                            
-                            <footer class="entry-footer d-flex">
-                                <?php materialwp_posted_on(); ?>
-                                <?php if ( get_edit_post_link() ) : ?>
-                                <?php
-                                    edit_post_link(
-                                        sprintf(
-                                            /* translators: %s: Name of current post */
-                                            esc_html__( 'Edit %s', 'materialwp' ),
-                                            the_title( '<span class="screen-reader-text">"', '"</span>', false )
-                                        ),
-                                        '<span class="edit-link">',
-                                        '</span>'
-                                    );
-                                endif;
-                                ?>
-                            </footer><!-- .entry-footer -->
-                        
-                        </article>
-                    <?php endwhile; ?>
-                </div><!-- #primary -->
-            </div><!-- .col -->
-        </div><!-- .row -->
-    </div><!-- container  -->
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <?php the_posts_navigation();?>
-            </div><!-- .col -->
-        </div><!-- .row -->
-    </div><!-- container  -->
-
-<?php 
-
-    else :
-
-        get_template_part( 'template-parts/content', 'none' );
-
-    endif;
-
-    get_footer();
+$container = get_theme_mod( 'understrap_container_type' );
 ?>
+
+<header class="page-header">
+	<div class="<?php echo esc_attr( $container ); ?>">
+		<div class="row">
+			<div class="col">
+				<?php
+				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				the_archive_description( '<div class="taxonomy-description">', '</div>' );
+				?>
+			</div>
+		</div><!-- end .row -->
+	</div>
+</header><!-- .page-header -->
+
+<div class="wrapper" id="archive-wrapper">
+
+	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+
+		<div class="row">
+
+			<!-- Do the left sidebar check -->
+			<?php get_template_part( 'sidebar-templates/sidebar', 'blog' ); ?>
+
+			<div class="col-md order-first order-lg-4 px-md-5 py-md-3">
+
+				<main class="site-main" id="main">
+
+					<?php if ( have_posts() ) : ?>
+
+						<?php /* Start the Loop */ ?>
+						<?php while ( have_posts() ) : the_post(); ?>
+
+							<?php
+							/*
+							* Include the Post-Format-specific template for the content.
+							* If you want to override this in a child theme, then include a file
+							* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+							*/
+							get_template_part( 'loop-templates/content', get_post_format() );
+							?>
+
+						<?php endwhile; ?>
+
+					<?php else : ?>
+
+						<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+
+					<?php endif; ?>
+
+				</main><!-- #main -->
+
+				<!-- The pagination component -->
+				<?php understrap_pagination(); ?>
+			
+			</div><!-- end .col -->
+
+		</div> <!-- .row -->
+
+	</div><!-- #content -->
+
+	</div><!-- #archive-wrapper -->
+
+<?php get_footer(); ?>

@@ -1,34 +1,28 @@
 /**
  * --------------------------------------------------------------------------
- * Custom JS for QESST MaterialWP site
+ * Custom JS for QESST site
  * --------------------------------------------------------------------------
 */ 
 
 jQuery(document).ready(function( $ ) {
-   
+    
+    $('.home .typed').css('display','block');
+
     // Home Page
     new TypeIt('.ti-hero-slugs', {
-        strings: [
-            'is winning the Terawatt challenge.',
-            'is driving PV innovation.',
-            'is multiple universities working together.',
-            'stands for quantum energy and sustainable solar technologies.'
-        ],
         breakLines: false,
         loop: true,
-        loopDelay: 5000,
-        nextStringDelay: [400, 5000],
+        nextStringDelay: [3000, 500],
+        loopDelay: 3000,
         lifelike: false
-    });
+    }).go();
 
     new TypeIt('.typed-normal', {
         breakLines: false,
         loop: false,
         speed: 75,
         lifelike: false,
-        autostart: false,
-    });
+        waitUntilVisible: true
+    }).go();
 
 });
-
-

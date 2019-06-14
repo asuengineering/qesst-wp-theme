@@ -4,16 +4,21 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitcf98013d005475966dca7898fb9e6b9b
+class ComposerStaticInita5010e3c211cfc875d96076d7ac95ec9
 {
     public static $prefixLengthsPsr4 = array (
         'C' => 
         array (
+            'Composer\\Installers\\' => 20,
             'Carbon_Fields\\' => 14,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Composer\\Installers\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
+        ),
         'Carbon_Fields\\' => 
         array (
             0 => __DIR__ . '/..' . '/htmlburger/carbon-fields/core',
@@ -23,8 +28,8 @@ class ComposerStaticInitcf98013d005475966dca7898fb9e6b9b
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitcf98013d005475966dca7898fb9e6b9b::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitcf98013d005475966dca7898fb9e6b9b::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInita5010e3c211cfc875d96076d7ac95ec9::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInita5010e3c211cfc875d96076d7ac95ec9::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
