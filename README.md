@@ -2,7 +2,7 @@
 
 **Contributors:** Steve Ryan, ASU Engineering
 **Tested up to:** WordPress 5.1.2  
-**Version:** 0.2  
+**Version:** 1.0  
 **License:** MIT License
 **License URI:** [MIT License @ ChooseALicense](https://choosealicense.com/licenses/mit/)
 
