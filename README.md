@@ -1,8 +1,8 @@
 # QESST Child Theme for MaterialWP
 
 **Contributors:** Steve Ryan, ASU Engineering
-**Tested up to:** WordPress 5.1.2  
-**Version:** 1.0  
+**Tested up to:** WordPress 5.1.2
+**Version:** 1.0
 **License:** MIT License
 **License URI:** [MIT License @ ChooseALicense](https://choosealicense.com/licenses/mit/)
 
@@ -14,7 +14,7 @@ The project is maintained by the marketing and communications group within [ASU 
 
 ## Installation
 
-The QESST Theme for WordPress is a standalone theme for WordPress. It originated from the starter theme [Understrap](https://github.com/understrap/understrap). Periodic updates from the original can be selectively applied to this theme via `git pull` without overwriting the theme's customizations. 
+The QESST Theme for WordPress is a standalone theme for WordPress. It originated from the starter theme [Understrap](https://github.com/understrap/understrap). Periodic updates from the original can be selectively applied to this theme via `git pull` without overwriting the theme's customizations.
 
 ## Inclusions & Dependencies
 
@@ -27,6 +27,10 @@ See the Understrap GitHub repo for all of the dependencies of the original theme
 - It also includes Font Awesome, v5.8.1. A license for this product is maintained by ASU Engineering.
 
 ## Changelog
+
+### 1.0.1 (Nov 4, 2019)
+
+- Applying automated security updates from GitHub.
 
 ### 1.0 (June 14, 2019)
 
