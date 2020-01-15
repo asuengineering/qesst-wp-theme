@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.6.0",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b"
+                "reference": "141b272484481432cda342727a427dc1e206bfa0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/cfcca6b1b60bc4974324efb5783c13dca6932b5b",
-                "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b",
+                "url": "https://api.github.com/repos/composer/installers/zipball/141b272484481432cda342727a427dc1e206bfa0",
+                "reference": "141b272484481432cda342727a427dc1e206bfa0",
                 "shasum": ""
             },
             "require": {
@@ -73,6 +73,7 @@
                 "RadPHP",
                 "SMF",
                 "Thelia",
+                "Whmcs",
                 "WolfCMS",
                 "agl",
                 "aimeos",
@@ -95,6 +96,7 @@
                 "installer",
                 "itop",
                 "joomla",
+                "known",
                 "kohana",
                 "laravel",
                 "lavalite",
@@ -124,20 +126,20 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2018-08-27T06:10:37+00:00"
+            "time": "2019-08-12T15:00:31+00:00"
         },
         {
             "name": "htmlburger/carbon-fields",
-            "version": "v3.1.1",
+            "version": "v3.1.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/carbon-fields.git",
-                "reference": "65bd40b6e70ccbaeb9d0989c5589299f0983de04"
+                "reference": "67e6ee6c7f85ede909ec6de46f19ce1b2ff62e41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/65bd40b6e70ccbaeb9d0989c5589299f0983de04",
-                "reference": "65bd40b6e70ccbaeb9d0989c5589299f0983de04",
+                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/67e6ee6c7f85ede909ec6de46f19ce1b2ff62e41",
+                "reference": "67e6ee6c7f85ede909ec6de46f19ce1b2ff62e41",
                 "shasum": ""
             },
             "require": {
@@ -165,6 +167,32 @@
                     "role": "Developer"
                 },
                 {
+                    "name": "Miroslav Mitev",
+                    "email": "mmitev.2create@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Atanas Angelov",
+                    "email": "atanas.angelov.dev@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Georgi Stoyanov",
+                    "email": "stoyanov.gs@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Plamen Kostadinov",
+                    "email": "pkostadinov.2create@gmail.com",
+                    "homepage": "http://plasmen.info/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Stanimir Panchev",
+                    "email": "Stan4omir@gmail.com",
+                    "role": "Developer"
+                },
+                {
                     "name": "Marin Atanasov",
                     "email": "contact@marinatanasov.com",
                     "homepage": "http://marinatanasov.com/",
@@ -176,29 +204,19 @@
                     "role": "Developer"
                 },
                 {
-                    "name": "Georgi Stoyanov",
-                    "email": "stoyanov.gs@gmail.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Stanimir Panchev",
-                    "email": "Stan4omir@gmail.com",
-                    "role": "Developer"
-                },
-                {
                     "name": "Peter Petrov",
                     "email": "peter.petrov89@gmail.com",
                     "role": "Developer"
                 },
                 {
-                    "name": "Plamen Kostadinov",
-                    "email": "pkostadinov.2create@gmail.com",
-                    "homepage": "http://plasmen.info/",
+                    "name": "Stanimir Stoyanov",
+                    "email": "stanimir.k.stoyanov@gmail.com",
                     "role": "Developer"
                 },
                 {
-                    "name": "Stanimir Stoyanov",
-                    "email": "stanimir.k.stoyanov@gmail.com",
+                    "name": "Kaloyan Ivanov",
+                    "email": "kaloyanxivanov@gmail.com",
+                    "homepage": "http://vilepixels.com/",
                     "role": "Developer"
                 },
                 {
@@ -215,22 +233,6 @@
                     "name": "Rashko Petrov",
                     "email": "brutalenemy666@gmail.com",
                     "homepage": "http://errorfactory.com/",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Miroslav Mitev",
-                    "email": "mmitev.2create@gmail.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Kaloyan Ivanov",
-                    "email": "kaloyanxivanov@gmail.com",
-                    "homepage": "http://vilepixels.com/",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Atanas Angelov",
-                    "email": "atanas.angelov.dev@gmail.com",
                     "role": "Developer"
                 },
                 {
@@ -257,7 +259,7 @@
             ],
             "description": "WordPress developer-friendly custom fields for post types, taxonomy terms, users, comments, widgets, options and more.",
             "homepage": "http://carbonfields.net/",
-            "time": "2019-04-11T09:46:37+00:00"
+            "time": "2020-01-10T14:08:06+00:00"
         }
     ],
     "packages-dev": [],
