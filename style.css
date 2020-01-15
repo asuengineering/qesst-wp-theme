@@ -6,7 +6,7 @@ Author URI: https://engineering.asu.edu
 GitHub Theme URI: https://github.com/asuengineering/qesst-wp-theme
 Description: Child theme for QESST.org. Created as a fork of the popular starter theme for WordPress called Understrap.
 
-Version: 1.0.1
+Version: 1.0.2
 
 Text Domain: qesst
 */
@@ -15,7 +15,4 @@ Text Domain: qesst
 This file is just used to identify the theme in WordPress.
 The compiled CSS output can be found in /css/theme.css
 The SASS sources for it can be found in /sass/
-The dependencies can be found in /src/ after running "gulp copy-assets" terminal command
-
-...and now go out and play!
 */

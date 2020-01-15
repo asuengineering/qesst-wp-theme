@@ -28,6 +28,11 @@ See the Understrap GitHub repo for all of the dependencies of the original theme
 
 ## Changelog
 
+### 1.0.2 (Jan 15, 2020)
+
+- Update Carbon Fields to 3.1.11. Update addressed JS error produced by the activation of Yoast SEO. Error rendered the media library `/wp-admin/upload.php` inoperable.
+- Applying additional automated security updates from GitHub.
+
 ### 1.0.1 (Nov 4, 2019)
 
 - Applying automated security updates from GitHub.
